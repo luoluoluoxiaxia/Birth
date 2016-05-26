@@ -41,7 +41,7 @@ $auth_status = post($authurl, $data, $cookie, 100);
 if ($auth_status) {
     $auth_status = json_decode($auth_status, true);
     if ($auth_status['success']) {
-        echolang('请输入选项目前只有签名：\n 1.签名');
+        echolang("请输入选项目前只有签名：\n 1.签名");
         $input = trim(fgets(STDIN));
         switch ($input) {
             case 1:
